@@ -4,5 +4,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
-st.write("Hello World!") #for displaying text
-st.slider('Slide it: ',0,100)
+st.set_page_config(page_title="Data Visualization With Streamlit",
+                   page_icon="😁")
+with st.sidebar:
+  st.title("Data Visualization With Streamlit")
+  upload=st.file_uploader("Upload CSV")
+
+if upload is not None:
+    df=pd.read_csv(upload)
+    st.dataframe(df.head())
