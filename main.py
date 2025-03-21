@@ -7,6 +7,7 @@ import seaborn as sns
 st.set_page_config(page_title="Data Visualization With Streamlit",
                    page_icon="😁")
 with st.sidebar:
+  st.write("Hi this is new changes")
   st.title("Data Visualization With Streamlit")
   upload=st.file_uploader("Upload CSV")
 
